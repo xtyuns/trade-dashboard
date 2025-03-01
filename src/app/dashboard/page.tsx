@@ -139,7 +139,7 @@ export default function DashboardPage() {
         () => positions.reduce((total, position) => {
             const convertedPnlRatio = parseFloat(position.pnlRatio) / parseFloat(position.closeTotalPos);
             return total + convertedPnlRatio;
-        }, 0).toFixed(2),
+        }, 0),
         [positions],
     );
     const totalPnl = useMemo(
@@ -238,7 +238,7 @@ export default function DashboardPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white rounded-lg p-6 shadow-sm">
                         <div className="text-gray-500 text-sm mb-2">总收益率</div>
-                        <div className={`text-2xl font-semibold ${Number(totalPnlRatio) >= 0 ? "text-green-600" : "text-red-600"}`}>{Number(totalPnlRatio) * 100}%</div>
+                        <div className={`text-2xl font-semibold ${Number(totalPnlRatio) >= 0 ? "text-green-600" : "text-red-600"}`}>{(Number(totalPnlRatio) * 100).toFixed(2)}%</div>
                     </div>
                     <div className="bg-white rounded-lg p-6 shadow-sm">
                         <div className="text-gray-500 text-sm mb-2">总盈亏金额</div>
