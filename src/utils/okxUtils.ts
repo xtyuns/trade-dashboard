@@ -1,4 +1,4 @@
-import { okxAccessKey, okxPassphrase, okxSecretKey } from "@/app/config";
+import { okxAccessKey, okxPassphrase, okxSecretKey } from "@/config";
 import { createHmac } from "crypto";
 
 export function getCurrentTimesStr() {
