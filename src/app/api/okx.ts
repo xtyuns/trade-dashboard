@@ -2,6 +2,7 @@
 
 import { signRequestHeaders } from "@/utils/okxUtils";
 import { okxApiBaseUrl } from "../config";
+import { Position } from "@/types/okx";
 
 export async function getAccountHistoryPosition(
     after?: string,

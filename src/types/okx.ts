@@ -26,7 +26,7 @@
  * @property {string} uTime - 仓位更新时间
  * @property {string} uly - 标的指数
  */
-type Position = {
+export type Position = {
     cTime: string;
     ccy: string;
     closeAvgPx: string;

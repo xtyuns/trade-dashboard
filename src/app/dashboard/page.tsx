@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import * as echarts from "echarts";
 import { getAccountHistoryPosition } from "../api/okx";
 import { getHoldingTimeDescription } from "@/utils/okxUtils";
+import { Position } from "@/types/okx";
 
 export default function DashboardPage() {
     // 状态管理
